@@ -1,0 +1,92 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* 헤더 */
+header {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+#wedding-photo {
+    width: 100%; /* 기본적으로 가로 크기를 화면에 맞게 100%로 설정 */
+    max-width: 800px; /* 최대 크기를 400px로 제한 */
+    height: auto; /* 비율에 맞게 높이 자동 조정 */
+    margin-top: 50px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* 모바일 화면에서 이미지 크기 조정 */
+@media (max-width: 768px) {
+    #wedding-photo {
+        width: 90%; /* 화면 크기에 맞게 이미지 크기를 90%로 설정 */
+        max-width: 300px; /* 최대 크기를 300px로 제한 */
+    }
+}
+
+/* 더 작은 화면 (예: 스마트폰)에서 이미지 크기 조정 */
+@media (max-width: 480px) {
+    #wedding-photo {
+        width: 90%; /* 화면 크기에 맞게 이미지 크기를 90%로 설정 */
+        max-width: 250px; /* 최대 크기를 250px로 제한 */
+    }
+}
+
+/* 초대장 정보 */
+.invitation {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.invitation h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* RSVP 버튼 */
+.rsvp button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rsvp button:hover {
+    background-color: #45a049;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+}
+
+footer p {
+    font-size: 14px;
+}
