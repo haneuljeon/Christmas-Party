@@ -7,11 +7,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>크리스마스 파티</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=082d40f4ad752edaf56b9844651afaa0"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    #map {
+        width: 100%;  /* 지도의 너비 */
+        height: 400px; /* 지도의 높이 */
+    }
+</style>
 <body>
     <div id="welcome-section" style="text-align: center;">
-        <img src="image/C1.jpg" alt="몽실이 이미지" id="wedding-photo">
+        <img src="image/C1.jpg" alt="party1" id="wedding-photo">
         <div id="enter-section">
             <button id="enter-button">입장하기</button>
         </div>
@@ -21,14 +28,14 @@
         <h1>Christmas Party</h1>
         <br><br>
         <div class="info" style="margin-bottom: 80px;">
-            <p>2024.12.24 화요일 오후 8시</p>
-            <p>대구 김진영 집</p>
+            <p>2024.12.24 화요일</p>
+            <p> 오후 8시</p>
+            <p>대구 황금동</p>
         </div>
         <div class="top">
-            <img src="image/C2.png" alt="몽실이2" id ="main-photo">
+            <img src="image/C2.png" alt="party2" id ="main-photo">
         </div>
         <br>
-
 
 
 
@@ -44,6 +51,30 @@
             </div>
             
         </div>
+
+        <div>
+            찾아오시는길
+        </div>
+        <div id="map"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=082d40f4ad752edaf56b9844651afaa0">
+        
+            var mapContainer = document.getElementById('map'); 
+            var mapOption = { 
+                center: new kakao.maps.LatLng(37.5665, 126.9780), 
+                
+                level: 3 
+            };
+            
+            
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+    
+            
+            var markerPosition = new kakao.maps.LatLng(37.5665, 126.9780); 
+            var marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+            marker.setMap(map);
+        </script>
     </div>
 
     <script src="script.js"></script>
