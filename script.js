@@ -7,20 +7,6 @@ document.getElementById("enter-button").addEventListener("click", function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loopFillGroupWithBlank: true,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-});
-
 function createSnowflakes(){
   const snowflakeCount = 10;
   const body = document.body;
@@ -28,7 +14,7 @@ function createSnowflakes(){
   for (let i =0; i < snowflakeCount; i++){
     const snowflake = document.createElement('div');
     snowflake.className = 'snowflake';
-    snowflake.style.left = Math.random() * 100 +'vw';
+    snowflake.style.left = Math.random() * 100 + 'vw';
     snowflake.style.animationDuration = Math.random() * 10 + 20 + 's';
     snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; 
     snowflake.innerHTML = '❄';
