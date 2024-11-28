@@ -101,14 +101,22 @@ header h1 {
     background-color: #45a049;
 }
 
-/* 푸터 */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-top: 2px solid #ccc;
-}
-
-footer p {
-    font-size: 14px;
-}
+.snowflake {
+    position: fixed;
+    top: -10px;
+    font-size: 1em;
+    color: white;
+    pointer-events: none;
+    animation: snow-animation 10s linear infinite;
+  }
+  
+  @keyframes snow-animation {
+    0% {
+      transform: translateX(0) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100vw) translateY(100vh);
+      opacity: 0.2;
+    }
+  }
